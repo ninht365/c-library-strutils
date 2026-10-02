@@ -403,7 +403,7 @@ Hệ điều hành Linux tìm kiếm Shared Library theo thứ tự ưu tiên t�
 
 ![C Memory Layout](docs/ketquabaitapbosung.png)
 
-*Hình 7.1: Kết quả in địa chỉ ô nhớ.*
+*Hình 6.1: Kết quả in địa chỉ ô nhớ.*
 
 </div>
 
@@ -433,7 +433,7 @@ Hệ điều hành Linux tìm kiếm Shared Library theo thứ tự ưu tiên t�
 
 ![C Memory Layout](docs/c_memory_layout.jpg)
 
-*Hình 7.2: Sơ đồ bản đồ bộ nhớ tiến trình C.*
+*Hình 6.2: Sơ đồ bản đồ bộ nhớ tiến trình C.*
 
 </div>
 
