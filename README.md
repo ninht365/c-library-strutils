@@ -13,6 +13,7 @@ c_library_project/
 ├── strutils.h          # File header khai báo các hàm mà thư viện cung cấp
 ├── strutils.c          # File mã nguồn cài đặt chi tiết các hàm
 ├── main.c              # File chương trình kiểm thử tự động
+├── memory_layout.c     # File chương trình kiểm thử tự động
 ├── README.md           # Báo cáo kỹ thuật chi tiết
 └── docs/
     └── images/         # Thư mục lưu trữ ảnh chụp màn hình kết quả
@@ -76,7 +77,7 @@ gcc -Wall -Wextra main.c strutils.o -o main_test
 ### 2.4. Kết quả thực thi Bài 1
 
 <p align="center">
-  <img src="docs/ketquabai1.png" alt="Kết quả thực thi kiểm thử của ./main_test." /><br>
+  <img src="docs/images/ketquabai1.png" alt="Kết quả thực thi kiểm thử của ./main_test." /><br>
   <em>Hình 1: Kết quả thực thi kiểm thử của ./main_test.</em>
 </p>
 
@@ -119,7 +120,7 @@ ls -lh libstrutils.a libstrutils.so
 ```
 
 <p align="center">
-  <img src="docs/ketquabai2.png" alt="Kết quả thực thi kiểm thử file thư viện tĩnh và động." /><br>
+  <img src="docs/images/ketquabai2.png" alt="Kết quả thực thi kiểm thử file thư viện tĩnh và động." /><br>
   <em>Hình 2: Kết quả thực thi kiểm thử file thư viện tĩnh và động.</em>
 </p>
 
@@ -147,12 +148,12 @@ gcc -Wall -Wextra main.c -L. -lstrutils -Wl,-rpath,. -o main_shared
 * Cả hai tệp thực thi `./main_static` và `./main_shared` khi chạy đều cho ra cùng kết quả kiểm thử chính xác (21/21 test cases đều PASS).
 
 <p align="center">
-  <img src="docs/ketquabai3(1).png" alt="Kết quả thực thi kiểm thử của main_static." /><br>
+  <img src="docs/images/ketquabai3(1).png" alt="Kết quả thực thi kiểm thử của main_static." /><br>
   <em>Hình 3.1: Kết quả thực thi kiểm thử của main_static.</em>
 </p>
 
 <p align="center">
-  <img src="docs/ketquabai3(2).png" alt="Kết quả thực thi kiểm thử của main_shared." /><br>
+  <img src="docs/images/ketquabai3(2).png" alt="Kết quả thực thi kiểm thử của main_shared." /><br>
   <em>Hình 3.2: Kết quả thực thi kiểm thử của main_shared.</em>
 </p>
 
@@ -166,7 +167,7 @@ ldd main_shared
 ```
 
 <p align="center">
-  <img src="docs/ketquabai3(3).png" alt="Kết quả thực thi kiểm thử ldd giữa main_static và main_shared." /><br>
+  <img src="docs/images/ketquabai3(3).png" alt="Kết quả thực thi kiểm thử ldd giữa main_static và main_shared." /><br>
   <em>Hình 3.3: Kết quả thực thi kiểm thử ldd giữa main_static và main_shared.</em>
 </p>
 
@@ -195,32 +196,32 @@ File `Makefile` được xây dựng nhằm tự động hóa hoàn toàn chu tr
 ### 5.3. Kết quả kiểm thử Makefile
 
 <p align="center">
-  <img src="docs/ketquabai4(1).png" alt="Kiểm thử make clean" /><br>
+  <img src="docs/images/ketquabai4(1).png" alt="Kiểm thử make clean" /><br>
   <em>Hình 4.1: Kiểm thử make clean.</em>
 </p>
 
 <p align="center">
-  <img src="docs/ketquabai4(2).png" alt="Kiểm thử make static" /><br>
+  <img src="docs/images/ketquabai4(2).png" alt="Kiểm thử make static" /><br>
   <em>Hình 4.2: Kiểm thử make static.</em>
 </p>
 
 <p align="center">
-  <img src="docs/ketquabai4(3).png" alt="Kiểm thử make shared" /><br>
+  <img src="docs/images/ketquabai4(3).png" alt="Kiểm thử make shared" /><br>
   <em>Hình 4.3: Kiểm thử make shared.</em>
 </p>
 
 <p align="center">
-  <img src="docs/ketquabai4(4).png" alt="Kiểm thử make all" /><br>
+  <img src="docs/images/ketquabai4(4).png" alt="Kiểm thử make all" /><br>
   <em>Hình 4.4: Kiểm thử make all.</em>
 </p>
 
 <p align="center">
-  <img src="docs/ketquabai4(5).png" alt="Kiểm thử tính năng không build lại" /><br>
+  <img src="docs/images/ketquabai4(5).png" alt="Kiểm thử tính năng không build lại" /><br>
   <em>Hình 4.5: Kiểm thử tính năng không build lại khi không có thay đổi.</em>
 </p>
 
 <p align="center">
-  <img src="docs/ketquabai4(6).png" alt="Kiểm thử make test" /><br>
+  <img src="docs/images/ketquabai4(6).png" alt="Kiểm thử make test" /><br>
   <em>Hình 4.6: Kiểm thử make test.</em>
 </p>
 
@@ -239,7 +240,7 @@ ls -lh main_static main_shared
 #### 2. Kết quả thực nghiệm:
 <div align="center">
 
-![So sánh kích thước main_static và main_shared](docs/ketquabai5(1).png)
+![So sánh kích thước main_static và main_shared](docs/images/ketquabai5(1).png)
 
 *Hình 5.1: So sánh kích thước phân vùng bộ nhớ và dung lượng tệp tin.*
 
@@ -277,7 +278,7 @@ mv libstrutils.so.bak libstrutils.so
 #### 2. Kết quả quan sát:
 <div align="center">
 
-![Thực nghiệm xóa libstrutils.so](docs/ketquabai5(2).png)
+![Thực nghiệm xóa libstrutils.so](docs/images/ketquabai5(2).png)
 
 *Hình 5.2: Kết quả khi đổi tên / xóa libstrutils.so.*
 
@@ -401,7 +402,7 @@ Hệ điều hành Linux tìm kiếm Shared Library theo thứ tự ưu tiên t�
 
 <div align="center">
 
-![C Memory Layout](docs/ketquabaitapbosung.png)
+![C Memory Layout](docs/images/ketquabaitapbosung.png)
 
 *Hình 6.1: Kết quả in địa chỉ ô nhớ.*
 
@@ -431,7 +432,7 @@ Hệ điều hành Linux tìm kiếm Shared Library theo thứ tự ưu tiên t�
 
 **Sơ đồ trực quan 5 phân vùng C Memory Layout:**
 
-![C Memory Layout](docs/c_memory_layout.jpg)
+![C Memory Layout](docs/images/c_memory_layout.jpg)
 
 *Hình 6.2: Sơ đồ bản đồ bộ nhớ tiến trình C.*
 
