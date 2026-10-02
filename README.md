@@ -225,7 +225,6 @@ File `Makefile` được xây dựng nhằm tự động hóa hoàn toàn chu tr
   <em>Hình 4.6: Kiểm thử make test.</em>
 </p>
 
----
 
 ## 6. BÀI 5: THÍ NGHIỆM VÀ TRẢ LỜI CÂU HỎI
 
