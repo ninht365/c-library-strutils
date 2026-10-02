@@ -1,0 +1,15 @@
+#Object and library files
+*.o
+*.a
+*.so
+
+# Executables
+main_static
+main_shared
+main_test
+memory_layout
+
+# Temporary files
+*.swp
+*~
+.DS_Store
